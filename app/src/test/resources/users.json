@@ -1,0 +1,69 @@
+{
+  "results": [
+    {
+      "name": {
+        "title": "Ms",
+        "first": "Jenny",
+        "last": "Dombrowski"
+      },
+      "email": "jenny.dombrowski@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/24.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/24.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/24.jpg"
+      }
+    },
+    {
+      "name": {
+        "title": "Mademoiselle",
+        "first": "Dolores",
+        "last": "Duval"
+      },
+      "email": "dolores.duval@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/31.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/31.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/31.jpg"
+      }
+    },
+    {
+      "name": {
+        "title": "Mrs",
+        "first": "آنیتا",
+        "last": "سلطانی نژاد"
+      },
+      "email": "anyt.sltnynjd@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/35.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/35.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/35.jpg"
+      }
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Stefan",
+        "last": "Becker"
+      },
+      "email": "stefan.becker@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/47.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/47.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/47.jpg"
+      }
+    },
+    {
+      "name": {
+        "title": "Mr",
+        "first": "Afre",
+        "last": "Monteiro"
+      },
+      "email": "afre.monteiro@example.com",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/14.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/14.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/14.jpg"
+      }
+    }
+  ]
+}
