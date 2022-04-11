@@ -22,16 +22,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
+import androidx.activity.viewModels
 
 
 @Composable
 fun Screen(navController: NavController, viewModel: UsersViewModel = hiltViewModel()){
-    val usersList by viewModel.getUsers().observeAsState(initial = arrayListOf())
-    ListScreen(navController, usersList)
+
+    val usersList by viewModel._users.observeAsState(initial = emptyList())
+    ListScreen(usersList)
 }
 
 @Composable
-fun ListScreen(navController: NavController, users: List<Users>){
+fun ListScreen(users: List<Users>){
     Scaffold(
         topBar = {
             TopAppBar(
@@ -76,18 +78,3 @@ fun ListScreen(navController: NavController, users: List<Users>){
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun ListPreview(){
-    ListScreen(navController = rememberNavController(), users = arrayListOf(
-            Users(
-                email = "hola@hola.com", name = ( Name("mr", "hola", "hola")),
-                picture = (Picture("https://randomuser.me/api/portraits/women/28.jpg", "https://randomuser.me/api/portraits/med/women/28.jpg", "https://randomuser.me/api/portraits/thumb/women/28.jpg"))
-            ),
-            Users(
-                email = "hola@hola.com", name = ( Name("mr", "hola", "hola")),
-                picture = (Picture("https://randomuser.me/api/portraits/women/28.jpg", "https://randomuser.me/api/portraits/med/women/28.jpg", "https://randomuser.me/api/portraits/thumb/women/28.jpg"))
-            )
-        )
-    )
-}

@@ -4,6 +4,7 @@ import com.example.cleanarchitecture.provider.UsersProvider
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.scopes.ViewModelScoped
 import dagger.hilt.components.SingletonComponent
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrl
@@ -19,8 +20,8 @@ class ProviderModule {
     @Named("BaseUrl")
     fun provideBaseUrl() = "https://randomuser.me/api/".toHttpUrl()
 
-    @Singleton
     @Provides
+    @Singleton
     fun provideRetrofit(@Named("BaseUrl") baseUrl: HttpUrl): Retrofit {
         return Retrofit.Builder().addConverterFactory(GsonConverterFactory.create()).baseUrl(baseUrl).build()
     }

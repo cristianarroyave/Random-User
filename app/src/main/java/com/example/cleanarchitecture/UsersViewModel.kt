@@ -17,13 +17,16 @@ class UsersViewModel @Inject constructor(
     private val repository: UsersRepository
 ) : ViewModel() {
 
-    private val _users = MutableLiveData<List<Users>>()
+    val _users = MutableLiveData<List<Users>>()
 
-    fun getUsers(): LiveData<List<Users>> {
+    init {
+        getUsers()
+    }
+
+    fun getUsers() {
         viewModelScope.launch(Dispatchers.IO) {
             val users = repository.getUsers()
             _users.postValue(users)
         }
-        return _users
     }
 }
